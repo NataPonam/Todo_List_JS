@@ -10,13 +10,15 @@ body {
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1rem;
   font-weight: 400;
- }
+}
 
 ul,
 li {
   list-style-type: none;
 }
 .page {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   background-color: rgb(142, 162, 207);
 }
@@ -25,6 +27,8 @@ li {
   justify-content: center;
   align-items: flex-start;
   height: 90vh;
+  margin-top: 5vh;
+  flex: 1;
 }
 .todo {
   border: 1px solid white;
@@ -42,9 +46,9 @@ li {
   color: white;
   text-align: center;
 }
-.header,
+
 .footer {
-  height: 5vh;
+  height: 5vh
 }
 
 /*инпут обертка*/
@@ -63,6 +67,7 @@ li {
   border-radius: 5px;
   padding: 6px 50px 5px 10px;
   display: flex;
+  color: rgb(90, 85, 85);
 }
 
 /*квадрат*/
@@ -129,7 +134,7 @@ li {
   border-color: rgb(250, 197, 128);
 }
 .todo-card__button:hover {
-  border: 1px solid white ;
+  border: 1px solid white;
   background-color: rgb(249, 183, 98);
   transition: 0.25s ease-in;
 }
@@ -143,10 +148,12 @@ li {
 .footer {
   text-align: center;
   color: white;
+  flex: 0;
+ 
 }
 .footer__copyright {
-  padding: 10px;
-} 
+   padding: 10px;
+}
 /*скролл*/
 .todo__list::-webkit-scrollbar {
   width: 15px;
