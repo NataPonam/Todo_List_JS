@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="список задач" />
+    <meta name="author" content="Наталья Понамаренко" />
+    <meta name="copyright" content="Наталья Понамаренко" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ToDoListYAP</title>
+  </head>
+  <body class="page">
+    <header class="header page-section"></header>
+    <main class="main">
+      <section class="todo">
+        <h1 class="todo__title">Todo List Vanilla JS</h1>
+        <form class="form">
+          <input
+            class="form__input"
+            type="text"
+            placeholder="Следующее дело..."
+                    />
+          <button class="form__button" type="submit"></button>
+        </form>
+        <ul class="todo__list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer page-section">
+      <p class="footer__copyright">©&nbsp;2023&nbsp;Nata Ponamarenko</p>
+    </footer>
+
+    <script defer src="./index.js"></script>
+
+    <template id="todo-template">
+      <li class="todo-card">
+        <div class="todo-card__title"> </div>
+        <div class="todo-card__controls">
+          <button
+            class="todo-card__button todo-card__button_type_check"
+          ></button>
+          <button
+            class="todo-card__button todo-card__button_type_delete"
+          ></button>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 1rem;
+  font-weight: 400;
+ }
+
+ul,
+li {
+  list-style-type: none;
+}
+.page {
+  box-sizing: border-box;
+  background-color: rgb(142, 162, 207);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 90vh;
+}
+.todo {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 10px;
+  min-width: 500px;
+  margin: 0 5px;
+}
+.todo__title {
+  color: white;
+  text-align: center;
+}
+.header,
+.footer {
+  height: 5vh;
+}
+
+/*инпут обертка*/
+.form {
+  position: relative;
+}
+/*инпут*/
+.form__input {
+  border: 1px solid rgb(142, 162, 207);
+  width: 100%;
+  height: 50px;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 5px;
+  padding: 6px 50px 5px 10px;
+  display: flex;
+}
+
+/*квадрат*/
+.form__button {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(142, 162, 207);
+  position: absolute;
+  border-radius: 5px;
+  border: none;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background-image: url('./img/icon__plus.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px;
+}
+.form__button:hover {
+  background-color: rgb(124, 142, 185);
+  transition: 0.25s ease-in;
+}
+
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.todo-card {
+  background: #ffffffb7;
+  border-radius: 5px;
+  padding: 6px 5px 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checked {
+  text-decoration: line-through;
+}
+.todo-card__title {
+  color: rgb(90, 85, 85);
+  font-weight: 400;
+  font-size: 16px;
+  max-width: 350px;
+}
+
+.todo-card__controls {
+  display: flex;
+  gap: 5px;
+  background: none;
+  padding: 0;
+}
+.todo-card__button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(250, 197, 128);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: rgb(250, 197, 128);
+}
+.todo-card__button:hover {
+  border: 1px solid white ;
+  background-color: rgb(249, 183, 98);
+  transition: 0.25s ease-in;
+}
+.todo-card__button_type_check {
+  background-image: url('./img/icon__check-mark.svg');
+}
+.todo-card__button_type_delete {
+  background-image: url('./img/icon__close_white.svg');
+}
+/*футер*/
+.footer {
+  text-align: center;
+  color: white;
+}
+.footer__copyright {
+  padding: 10px;
+} 
+/*скролл*/
+.todo__list::-webkit-scrollbar {
+  width: 15px;
+  background: rgb(142, 162, 207);
+  border-radius: 5px;
+}
+.todo__list::-webkit-scrollbar-track {
+  background: rgb(142, 162, 207);
+  border-radius: 5px;
+}
+.todo__list::-webkit-scrollbar-thumb {
+  border: 4px solid rgb(142, 162, 207);
+  background: rgb(250, 197, 128);
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 530px) {
+  .todo {
+    min-width: calc(100% - 10px);
+  }
+  .todo-card__title {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .todo {
+    min-width: fit-content;
+  }
+  .todo-card__title {
+    font-size: 12px;
+  }
+}
